@@ -39,7 +39,7 @@ body {
     width: 100%;
     height: 100%;
     background: rgba(0, 0, 0, 0.5); /* Black overlay with some opacity */
-    backdrop-filter: blur(1px); /* Adjusted lower blur */
+    backdrop-filter: blur(2px); /* Lower blur */
     z-index: 0;
 }
 
@@ -52,7 +52,7 @@ body {
     text-align: left; /* Left align */
     color: #3E8E41; /* Muted green text color */
     z-index: 1;
-    width: 60%; /* Adjusted width */
+    width: 80%;
 }
 
 .overlay h1 {
@@ -69,57 +69,4 @@ body {
     margin-top: 10px;
     max-width: 80%;
     text-align: left; /* Left-aligned */
-}
-
-/* Carousel and Cards Styling */
-.carousel-item img {
-    width: 100px;
-    height: 100px;
-    object-fit: cover;
-    border-radius: 50%;
-    margin: 0 auto;
-    background-color: #964B00; /* Dark brown background color */
-}
-
-.carousel-item h5 {
-    color: #333; /* Dark gray text color */
-    font-size: 1.25rem;
-    margin-top: 10px;
-}
-
-.carousel-item {
-    text-align: center;
-    background-color: #F5F5DC; /* Light beige background color */
-}
-
-.carousel-inner {
-    display: flex;
-    justify-content: center;
-}
-
-.carousel-item {
-    padding: 10px;
-    flex: 0 0 auto;
-    width: 250px;
-    margin: 0 15px;
-    transition: transform 0.3s ease;
-    background-color: #F5F5DC; /* Light beige background color */
-}
-
-.carousel-item:hover {
-    transform: scale(1.05);
-    background-color: #964B00; /* Dark brown background color */
-}
-
-/* Section 3: Map Section Styling */
-#map-section {
-    padding: 40px 0;
-    background-color: #F5F5DC; /* Light beige background color */
-    text-align: center;
-}
-
-#map-section h2 {
-    font-size: 2rem;
-    margin-bottom: 20px;
-    color: #3E8E41; /* Muted green text color */
 }
