@@ -3,8 +3,8 @@ body {
     font-family: 'Arial', sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f0f0f0;
-    color: #333;
+    background-color: #F5F5DC; /* Light beige background color */
+    color: #333; /* Dark gray text color */
 }
 
 /* Section Styling for Full-Page Video Background */
@@ -16,6 +16,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+    background-color: #964B00; /* Dark brown background color */
 }
 
 /* Styling for the YouTube iframe video */
@@ -49,7 +50,7 @@ body {
     left: 10%;
     transform: translate(0, -50%);
     text-align: left; /* Left align */
-    color: white;
+    color: #3E8E41; /* Muted green text color */
     z-index: 1;
     width: 80%;
 }
@@ -64,7 +65,7 @@ body {
 .overlay p {
     font-family: 'Open Sans', sans-serif; /* Updated font */
     font-size: 1.2rem;
-    color: white;
+    color: #3E8E41; /* Muted green text color */
     margin-top: 10px;
     max-width: 80%;
     text-align: left; /* Left-aligned */
@@ -77,16 +78,18 @@ body {
     object-fit: cover;
     border-radius: 50%;
     margin: 0 auto;
+    background-color: #964B00; /* Dark brown background color */
 }
 
 .carousel-item h5 {
-    color: #333;
+    color: #333; /* Dark gray text color */
     font-size: 1.25rem;
     margin-top: 10px;
 }
 
 .carousel-item {
     text-align: center;
+    background-color: #F5F5DC; /* Light beige background color */
 }
 
 .carousel-inner {
@@ -100,20 +103,23 @@ body {
     width: 250px;
     margin: 0 15px;
     transition: transform 0.3s ease;
+    background-color: #F5F5DC; /* Light beige background color */
 }
 
 .carousel-item:hover {
     transform: scale(1.05);
+    background-color: #964B00; /* Dark brown background color */
 }
 
 /* Section 3: Map Section Styling */
 #map-section {
     padding: 40px 0;
-    background-color: #fff;
+    background-color: #F5F5DC; /* Light beige background color */
     text-align: center;
 }
 
 #map-section h2 {
     font-size: 2rem;
     margin-bottom: 20px;
+    color: #3E8E41; /* Muted green text color */
 }
