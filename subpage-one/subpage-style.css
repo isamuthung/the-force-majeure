@@ -1,0 +1,81 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    overflow-x: hidden;
+}
+
+.cover-banner {
+    height: 70vh;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+}
+
+.banner-title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    text-align: center;
+    color: white;
+    padding: 0 20px;
+}
+
+.banner-title h1 {
+    font-size: 4rem;
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+}
+
+.content {
+    display: flex;
+    padding: 50px 10%;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.text-description {
+    width: 48%;
+    font-size: 1.2rem;
+    line-height: 1.6;
+}
+
+.subtitle {
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+.video-embed {
+    width: 48%;
+}
+
+.video-embed iframe {
+    width: 100%;
+    height: 315px;
+}
+
+/* Styling for the Back to Main button */
+.back-to-main-btn {
+    display: none;  /* Start as hidden */
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+    padding: 10px 20px;
+    background-color: #188f77; /* Your desired button color */
+    color: white;
+    font-size: 18px;
+    border-radius: 5px;
+    text-decoration: none;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s ease;
+}
+
+.back-to-main-btn:hover {
+    background-color: #155f4b; /* Darker shade for hover effect */
+}
+
+.back-to-main-btn:active {
+    transform: scale(0.95);  /* Slight press effect */
+}
