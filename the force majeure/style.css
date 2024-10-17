@@ -1,0 +1,288 @@
+/* SECTION 1: Background Section */
+#background-section {
+    position: relative;
+    height: 100vh;
+    overflow: hidden;
+}
+
+#video-background, #image-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;  /* Background element z-index */
+}
+
+#image-background img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.overlay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #fff;  /* Text color for overlay */
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.5);  /* Overlay background color and opacity */
+    padding: 20px;
+    border-radius: 10px;  /* Border radius for rounded corners */
+}
+
+.toggle-btn {
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    padding: 8px 12px;  /* Button padding */
+    background-color: #bc6c25;  /* Button background color (Desert palette) */
+    color: white;  /* Button text color */
+    border: none;
+    border-radius: 5px;  /* Button border radius */
+    cursor: pointer;
+    font-size: 14px;  /* Button font size */
+}
+
+/* SECTION 2: Card Carousel */
+#card-carousel {
+    padding: 40px 0;
+    background-color: #f9f5f2;  /* Carousel background color */
+}
+
+.carousel-container {
+    position: relative;
+    max-width: 1200px;  /* Max width of the carousel */
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+.carousel-track {
+    display: flex;
+    transition: transform 0.5s ease;
+    width: 100%;  /* Track full width */
+    justify-content: flex-start;
+}
+
+.card {
+    flex: 0 0 250px;  /* Card width */
+    height: 350px;  /* Card height */
+    margin: 0 15px;  /* Margin between cards */
+    background-color: #e0e0e0;  /* Card background color */
+    border-radius: 10px;  /* Card border radius */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;  /* Centered alignment */
+    text-align: center;
+    padding: 20px;  /* Padding inside cards */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);  /* Card shadow effect */
+    transition: transform 0.3s ease;
+    overflow: hidden;  /* Prevent content overflow */
+}
+
+.card:hover {
+    transform: translateY(-5px);  /* Hover effect on cards */
+}
+
+.card img {
+    width: 120px;  /* Image size */
+    height: 120px;
+    border-radius: 50%;  /* Circular image */
+    object-fit: cover;
+    margin-bottom: 20px;  /* Reduced margin to bring elements closer */
+}
+
+.card h3 {
+    font-size: 1.2rem;  /* Card title font size */
+    color: #333;  /* Card title color */
+    margin: 0;  /* Removed margin for better spacing */
+    text-decoration: underline;  /* Underlined title */
+}
+
+.card p {
+    font-size: 0.9rem;  /* Card paragraph font size */
+    color: #555;  /* Card paragraph color */
+    margin: 10px 0;  /* Margin for paragraph */
+    line-height: 1.4;
+}
+
+/* Specific styling for card title to enhance visibility */
+.card-title {
+    margin-top: 5px;  /* Slight top margin for spacing */
+}
+
+
+.nav-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(255, 255, 255, 0.7);  /* Button background color */
+    border: none;
+    font-size: 24px;  /* Button font size */
+    padding: 10px 15px;
+    cursor: pointer;
+    z-index: 2;
+}
+
+.prev-btn { left: 10px; }  /* Previous button position */
+.next-btn { right: 10px; }  /* Next button position */
+
+#add-card-btn {
+    display: block;
+    margin: 20px auto;
+    padding: 10px 20px;  /* Button padding */
+    background-color: #bc6c25;  /* Button background color (Desert palette) */
+    color: white;  /* Button text color */
+    border: none;
+    border-radius: 5px;  /* Button border radius */
+    cursor: pointer;
+    font-size: 16px;  /* Button font size */
+}
+
+#add-card-btn:hover {
+    background-color: #a85e21;  /* Button hover color */
+}
+
+/* SECTION 3: Embedded Map */
+#map-section {
+    padding: 40px 0;  /* Section padding */
+}
+
+/* Menu Banner */
+#menu-banner {
+    position: fixed;
+    top: -60px;  /* Hidden position initially */
+    width: 100%;
+    background-color: #333;  /* Banner background color */
+    color: white;  /* Text color */
+    transition: top 0.3s ease-in-out;
+    z-index: 100;  /* Menu on top of other elements */
+}
+
+#menu-banner ul {
+    list-style: none;
+    padding: 10px;
+    margin: 0;
+    display: flex;
+    justify-content: space-around;
+}
+
+#menu-banner ul li a {
+    color: white;  /* Link color */
+    text-decoration: none;
+    font-family: 'Open Sans', sans-serif;  /* Font family */
+}
+
+/* Title and Sign-up box hide class */
+.hide {
+    opacity: 0;  /* Hide with opacity */
+    visibility: hidden;
+    transition: opacity 0.5s ease-in-out;
+}
+
+/* Title and Sign-up Boxes */
+#title-box, #signup-box {
+    position: absolute;
+    padding: 20px;  /* Padding inside title and sign-up box */
+    background-color: rgba(0, 0, 0, 0.5);  /* Box background color and opacity */
+    color: white;  /* Text color */
+    border-radius: 10px;  /* Box border radius */
+    transition: opacity 0.3s ease;
+}
+
+#title-box {
+    top: 50%;
+    left: 5%;
+    transform: translateY(-50%);
+    width: 580px;  /* Width of the title box */
+    height: 350px;  /* Height of the title box */
+}
+
+#signup-box {
+    top: 50%;
+    right: 5%;
+    transform: translateY(-50%);
+    width: 340px;  /* Width of the sign-up box */
+    height: 350px;  /* Height of the sign-up box */
+}
+
+#toggle-background {
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    padding: 5px 10px;
+    background-color: #bc6c25;  /* Button background color (Desert palette) */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* Fade out effect */
+.hide {
+    opacity: 0;
+}
+
+/* Flex container to align the title card and email sign-up */
+.container-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 95%;  /* Wrapper width */
+    max-width: 2200px;  /* Maximum width */
+    padding: 20px;  /* Padding inside wrapper */
+}
+
+/* Style for both containers */
+.title-card, .email-signup {
+    background-color: rgba(0, 0, 0, 0.5);  /* Container background color */
+    color: #fff;  /* Text color */
+    text-align: left;
+    padding: 20px;  /* Padding inside containers */
+    flex: 1;  /* Flex grow for equal space */
+    min-width: 300px;  /* Minimum width */
+    border-radius: 10px;  /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);  /* Optional shadow */
+    margin: 10px;  /* Margin between containers */
+}
+
+/* Media query for smaller screens */
+@media (max-width: 768px) {
+    .container-wrapper {
+        flex-direction: column;  /* Stack containers vertically */
+        align-items: center;
+    }
+
+    .title-card, .email-signup {
+        width: 100%;  /* Full width on small screens */
+        margin-bottom: 20px;  /* Space between stacked containers */
+    }
+}
+
+/* Adjust form input and button inside email sign-up */
+.email-signup input {
+    width: 80%;  /* Input field width */
+    padding: 10px;
+    margin-bottom: 10px;
+    border: none;
+    border-radius: 5px;
+}
+
+.email-signup button {
+    padding: 10px 20px;  /* Button padding */
+    background-color: #bc6c25;  /* Button background color (Desert palette) */
+    color: white;  /* Button text color */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.email-signup button:hover {
+    background-color: #a85e21;  /* Hover state background color */
+}
