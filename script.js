@@ -10,7 +10,7 @@ document.addEventListener('DOMContentLoaded', async function() {
 
     // Function to fetch and process CSV data
     async function fetchCSVData() {
-        const response = await fetch('https://docs.google.com/spreadsheets/d/e/2PACX-1vRCE4yhqqSew-bUHH910NzBCsGPiHuBa7ZshoDZg3Lwja5qWS6peL6_ly4kT9fCGWigdLnN1PsXWEKM/pub?gid=2142661296&single=true&output=csv');
+        const response = await fetch('https://docs.google.com/spreadsheets/d/e/2PACX-1vTFvyHJ1fZxGvYxFOXPQ6y982w8UoFTRUpfRVoAWcSolVnErd-xsJnr7GT1VIBp9lH69_l06sGl5HPm/pub?gid=1119628772&single=true&output=csv');
         const data = await response.text();
         const rows = data.split('\n').slice(1); // Skip the header row
 
