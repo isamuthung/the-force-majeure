@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us</title>
+    <link rel="stylesheet" href="reach-us-style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Bikini+Season+Sans&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <div class="container">
+        <div class="header">
+            <h2>High Tech High Mesa</h2>
+            <h1>CONTACT US</h1>
+        </div>
+
+        <div class="content">
+            <div class="form-section">
+                <form id="contactForm">
+                    <div class="form-group">
+                        <label for="name">Name:</label>
+                        <input type="text" id="name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email:</label>
+                        <input type="email" id="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="phone">Phone:</label>
+                        <input type="tel" id="phone" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="interest">Select an Interest:</label>
+                        <select id="interest">
+                            <option value="general inquiry">General Inquiry</option>
+                            <option value="partnership">Partnership</option>
+                            <option value="volunteering">Volunteering</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Message:</label>
+                        <textarea id="message" rows="4" required></textarea>
+                    </div>
+                    <button type="submit">Submit</button>
+                </form>
+            </div>
+
+            <div class="contact-details">
+                <h3>Contact Details</h3>
+                <p>Name: Your Organization</p>
+                <p>Email: info@organization.com</p>
+                <p>Name: Another Contact</p>
+                <p>Email: contact@organization.com</p>
+                <p>Name: Additional Contact</p>
+                <p>Email: support@organization.com</p>
+            </div>
+        </div>
+
+        <a href="../main.html" class="back-to-main-btn" id="backButton">Back to Main</a>
+    </div>
+
+    <script src="reach-us-script.js"></script>
+</body>
+</html>
