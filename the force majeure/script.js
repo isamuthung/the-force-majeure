@@ -65,7 +65,7 @@ async function submitEmail(event) {
 
     // Send a POST request to the Google Apps Script URL
     try {
-        const response = await fetch('https://script.google.com/macros/s/AKfycbxpAHh6rvI5WJ0UbDvA8ASu5Gr0EEPVIG-TtLL6V16oV_mN6ZhjogJZ1HZhAK4T3h-Vsg/exec', {
+        const response = await fetch('https://script.google.com/macros/s/AKfycbyAIsoJ0KapKLa9g0Ut3lG9x0HWiu_wXkN1iFJVUB4-7walhyapkcqimCgvy9KyBG286Q/exec', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/x-www-form-urlencoded'
