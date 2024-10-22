@@ -65,7 +65,7 @@ async function submitEmail(event) {
 
     // Send a POST request to the Google Apps Script URL
     try {
-        const response = await fetch('https://script.google.com/macros/s/AKfycbyAIsoJ0KapKLa9g0Ut3lG9x0HWiu_wXkN1iFJVUB4-7walhyapkcqimCgvy9KyBG286Q/exec', {
+        const response = await fetch('https://script.google.com/macros/u/1/s/AKfycbwf4zPsYugVBwcjGtKmtXMeTU5fr7jgF6wglIffr8r62QU2EWLiRKNol4RrA4WgPX4zVA/exec', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/x-www-form-urlencoded'
@@ -94,6 +94,67 @@ async function submitEmail(event) {
     }
 }
 
+
+// Function to handle Contact Us form submission
+async function submitContactUs(event) {
+    event.preventDefault(); // Prevent the default form submission
+
+    // Get form values
+    const name = document.getElementById('name').value.trim();
+    const email = document.getElementById('email').value.trim();
+    const phone = document.getElementById('phone').value.trim();
+    const interest = document.getElementById('interest').value.trim();
+    const message = document.getElementById('message').value.trim();
+
+    // Basic validation
+    if (!name || !email || !phone || !interest || !message) {
+        alert('Please fill in all the required fields.');
+        return; // Exit if validation fails
+    }
+
+    // Email validation
+    const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/; // Simple regex for email validation
+    if (!emailPattern.test(email)) {
+        alert('Please enter a valid email address.');
+        return; // Exit if the email is invalid
+    }
+
+    // Send a POST request to the Google Apps Script URL
+    try {
+        const response = await fetch('https://script.google.com/macros/u/1/s/AKfycbwf4zPsYugVBwcjGtKmtXMeTU5fr7jgF6wglIffr8r62QU2EWLiRKNol4RrA4WgPX4zVA/exec', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/x-www-form-urlencoded'
+            },
+            body: new URLSearchParams({ 
+                name: name, 
+                email: email, 
+                phone: phone, 
+                interest: interest, 
+                message: message 
+            }) // Create a URLSearchParams object with the form data
+        });
+
+        // Check if the response is ok (status in the range 200-299)
+        if (!response.ok) {
+            throw new Error('Network response was not ok ' + response.statusText);
+        }
+
+        const result = await response.json();
+
+        // Check if the response indicates success
+        if (result.result === 'success') {
+            alert('Thank you for reaching out! We will get back to you soon.');
+            // Clear the form after successful submission
+            document.getElementById('contactForm').reset();
+        } else {
+            alert('Error submitting the form. Please try again.');
+        }
+    } catch (error) {
+        console.error('Error submitting form:', error);
+        alert('There was an error submitting your form. Please try again later.');
+    }
+}
 
 // Carousel movement logic
 let currentIndex = 0;
