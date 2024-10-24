@@ -237,38 +237,41 @@
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    flex-wrap: wrap;  /* Ensure containers wrap instead of overlap */
     width: 95%;  /* Wrapper width */
     max-width: 2200px;  /* Maximum width */
     padding: 20px;  /* Padding inside wrapper */
+    margin: 0 auto;  /* Center the wrapper horizontally */
+    box-sizing: border-box;  /* Ensure padding and border are included in width */
 }
 
 /* Style for both containers */
 .title-card, .email-signup {
     background-color: rgba(0, 0, 0, 0.5);  /* Container background color */
     color: #fff;  /* Text color */
-    text-align: left;
     padding: 20px;  /* Padding inside containers */
     flex: 1;  /* Flex grow for equal space */
     min-width: 300px;  /* Minimum width */
     border-radius: 10px;  /* Rounded corners */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);  /* Optional shadow */
     margin: 10px;  /* Margin between containers */
+    box-sizing: border-box;  /* Ensure padding is included in width calculation */
 }
 
 /* Media query for smaller screens */
 @media (max-width: 768px) {
     .container-wrapper {
-        flex-direction: column;  /* Stack containers vertically */
-        align-items: center;
+        display: block;  /* Stack the containers vertically */
+        width: 100%;  /* Full width on small screens */
     }
 
-    .title-card, .email-signup {
+    .title-card {
         width: 100%;  /* Full width on small screens */
         margin-bottom: 20px;  /* Space between stacked containers */
+    }
+
+    .email-signup {
+        display: none;  /* Hide email sign-up on smaller screens */
     }
 }
 
@@ -282,7 +285,7 @@
 }
 .email-signup button {
     padding: 10px 20px;  /* Button padding */
-    background-color: #bc6c25;  /* Button background color (Desert palette) */
+    background-color: #bc6c25;  /* Button background color */
     color: white;  /* Button text color */
     border: none;
     border-radius: 5px;
@@ -292,7 +295,6 @@
     max-width: 200px;  /* Optional: Set a maximum width */
     text-align: center;  /* Center the text */
 }
-
 
 .email-signup button:hover {
     background-color: #a85e21;  /* Hover state background color */
